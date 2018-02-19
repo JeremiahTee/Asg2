@@ -22,7 +22,6 @@ public class Event {
 		year = 2017;
 		month = 12;
 		numberCities = 0;
-		
 		System.out.println("The Event default constructor has been triggered...");
 	}
 	
@@ -60,7 +59,7 @@ public class Event {
 	}
 	
 	public String toString(){
-		return "This Event will be held in " + this.year + ", " + this.month + " in " + this.numberCities + " cities";
+		return "This Event will be held in " + this.getYear() + ", " + this.getMonth() + " in " + this.getNumberCities() + " cities";
 	}
 	
 	//The null verification in this case is redundant, because you cannot call this equals() method on a null object. 
@@ -70,7 +69,7 @@ public class Event {
 		if(otherEvent == null && otherEvent.getClass() == this.getClass()){
 			return false;
 		}
-		return this.year == otherEvent.year && this.month == otherEvent.month && this.numberCities == otherEvent.numberCities;
+		return this.getYear() == otherEvent.getYear() && this.getMonth() == otherEvent.getMonth() && this.getNumberCities() == otherEvent.getNumberCities();
 	}
 	
 }
