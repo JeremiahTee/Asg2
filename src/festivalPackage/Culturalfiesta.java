@@ -45,9 +45,10 @@ public class Culturalfiesta extends Festival{
 		this.spokenLanguages = spokenLanguages;
 	}
 	
+	//accessing some attributes by name because those attributes are protected in Festival (access rights)
 	public String toString(){
-		return "This " + this.getName() + " Culturalfiesta will be held in " + this.getYear() + ", " + this.getMonth() + " in " 
-	+ this.getNumberCities() + " cities, for " + this.getDuration() + " days, the ticket will cost" + this.getTicketPrice() + "$,"
+		return "This " + this.name + " Culturalfiesta will be held in " + this.getYear() + ", " + this.getMonth() + " in " 
+	+ this.getNumberCities() + " cities, for " + this.duration + " days, the ticket will cost" + this.ticketPrice + "$,"
 			+ "and has " + this.getSpokenLanguages() + " spoken language";
 	}
 	
