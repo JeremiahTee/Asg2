@@ -46,7 +46,7 @@ public class Musicfiesta extends Festival{
 	
 	public String toString(){
 		return "This " + this.getName() + " Culturalfiesta will be held in " + this.getYear() + ", " + this.getMonth() + " in " 
-	+ this.getNumberCities() + " cities, for " + this.getDuration() + " days, the ticket will cost" + this.getTicketPrice() + "$,"
+	+ this.getNumberCities() + " cities, for " + this.getDuration() + " days, the ticket will cost " + this.getTicketPrice() + "$,"
 			+ "and has " + this.getNumberBands() + " number of bands";
 	}
 	

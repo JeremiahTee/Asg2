@@ -48,8 +48,8 @@ public class Culturalfiesta extends Festival{
 	//accessing some attributes by name because those attributes are protected in Festival (access rights)
 	public String toString(){
 		return "This " + this.name + " Culturalfiesta will be held in " + this.getYear() + ", " + this.getMonth() + " in " 
-	+ this.getNumberCities() + " cities, for " + this.duration + " days, the ticket will cost" + this.ticketPrice + "$,"
-			+ "and has " + this.getSpokenLanguages() + " spoken language";
+	+ this.getNumberCities() + " cities, for " + this.duration + " days, the ticket will cost " + this.ticketPrice + "$, "
+			+ " and has " + this.getSpokenLanguages() + " spoken language";
 	}
 	
 	//The null verification in this case is redundant, because you cannot call this equals() method on a null object. 

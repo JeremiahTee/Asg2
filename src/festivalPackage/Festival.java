@@ -73,7 +73,7 @@ public class Festival extends Event{
 	
 	public String toString(){
 		return "This " + this.getName() + " Festival will be held in " + this.getYear() + ", " + this.getMonth() + " in " 
-	+ this.getNumberCities() + " cities, for " + this.getDuration() + " days, the ticket will cost" + this.getTicketPrice() + "$";
+	+ this.getNumberCities() + " cities, for " + this.getDuration() + " days, the ticket will cost " + this.getTicketPrice() + "$";
 	}
 	
 	//The null verification in this case is redundant, because you cannot call this equals() method on a null object. 

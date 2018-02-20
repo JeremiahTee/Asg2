@@ -43,7 +43,7 @@ public class EventDriver {
 
 		Musicfiesta OneDirection = new Musicfiesta();
 		System.out.println();
-		Musicfiesta Brockhampton = new Musicfiesta(2018, 8, 23, "Brockhampton Debut", 100.0, 5, 1);
+		Musicfiesta Brockhampton = new Musicfiesta(2015, 8, 23, "Brockhampton Debut", 100.0, 5, 1);
 		System.out.println();
 
 		SportCompetition Brazil2010 = new SportCompetition(2010, 5, 1, 60, season.SUMMER);
@@ -68,7 +68,7 @@ public class EventDriver {
 		System.out.println(Sotchi2012);
 		System.out.println(ConcordiaFair);
 		System.out.println(McGillFair);
-		System.out.println("Is BladerRunner equal to BladeRunner2049? (answer should be false) : "
+		System.out.println("\n\nIs BladerRunner equal to BladeRunner2049? (answer should be false) : "
 				+ BladeRunner.equals(BladeRunner2049) + "\n");
 		System.out.println("Is YunShi equal to YunShiCopy? (answer should be true) : " + YunShi.equals(YunShiCopy)+ "\n");
 		System.out.println(
@@ -104,7 +104,7 @@ public class EventDriver {
 			}
 			
 			if(eventArray[i].getYear() == eventArray[i+1].getYear()) {
-				System.out.println("\nThe event" + eventArray[i]+ "\n and the event " + eventArray[i + 1] +
+				System.out.println("\n" + eventArray[i]+ "\n and " + eventArray[i + 1] +
 						"\n are happening at the same year, their index are " + i + " and " + (i + 1) + "\n");
 			}
 		}
@@ -113,6 +113,5 @@ public class EventDriver {
 				+ "\n with an index of " + indexLeastCities);
 		System.out.println("\nThe event with most number of cities is: " + eventArray[indexMostCities] 
 				+ "\n with an index of " + indexMostCities);
-
 	}
 }
