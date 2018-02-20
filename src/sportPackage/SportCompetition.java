@@ -17,23 +17,26 @@ import eventPackage.Event;
 
 public class SportCompetition extends Event{
 	private int numberActivities;
-	enum seasonName {SUMMER, FALL, WINTER, SPRING}
-	
+	public enum seasonName {SUMMER, FALL, WINTER, SPRING}
+	seasonName season;
+
 	public SportCompetition() {
 		super();
 		numberActivities = 3;
 		System.out.println("The SportCompetition default constructor has been triggered...");
 	}
 	
-	public SportCompetition(int year, int month, int numberCities, int numberActivities) {
+	public SportCompetition(int year, int month, int numberCities, int numberActivities, seasonName season) {
 		super(year, month, numberCities);
 		this.numberActivities = numberActivities;
+		this.season = season;
 		System.out.println("The SportCompetition parametrized constructor has been triggered...");
 	}
 	
 	public SportCompetition(SportCompetition otherSportCompetition) {
 		super(otherSportCompetition);
 		this.numberActivities = otherSportCompetition.numberActivities;
+		this.season = otherSportCompetition.season;
 		System.out.println("The SportCompetition copy constructor has been triggered...");
 	}
 	public int getNumberActivities() {
@@ -43,9 +46,17 @@ public class SportCompetition extends Event{
 		this.numberActivities = numberActivities;
 	}
 	
+	public seasonName getSeason() {
+		return season;
+	}
+
+	public void setSeason(seasonName season) {
+		this.season = season;
+	}
+	
 	public String toString(){
 		return "This SportCompetition will be held in " + this.getYear() + ", " + this.getMonth() + " in " + this.getNumberCities() + " cities"
-				+ " and has " + this.getNumberActivities() + " activities";
+				+ " and has " + this.getNumberActivities() + " activities" + " and is season type " + this.getSeason(); 
 	}
 	
 	//The null verification in this case is redundant, because you cannot call this equals() method on a null object. 
@@ -56,6 +67,6 @@ public class SportCompetition extends Event{
 			return false;
 		}
 		return this.getYear() == otherSportCompetition.getYear() && this.getMonth() == otherSportCompetition.getMonth() && this.getNumberCities() == otherSportCompetition.getNumberCities()
-				&& this.getNumberActivities() == otherSportCompetition.getNumberActivities();
+				&& this.getNumberActivities() == otherSportCompetition.getNumberActivities() && this.season == otherSportCompetition.season;
 	}
 }

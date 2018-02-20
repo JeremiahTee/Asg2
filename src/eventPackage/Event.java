@@ -71,5 +71,4 @@ public class Event {
 		}
 		return this.getYear() == otherEvent.getYear() && this.getMonth() == otherEvent.getMonth() && this.getNumberCities() == otherEvent.getNumberCities();
 	}
-	
 }

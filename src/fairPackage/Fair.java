@@ -17,23 +17,27 @@ import eventPackage.Event;
 
 public class Fair extends Event{
 	private int exibitors;
-	enum type {CAREER, SCIENCE, TRADE, TRAVEL}
+	public enum type {CAREER, SCIENCE, TRADE, TRAVEL}
+	type type;
 	
 	public Fair() {
 		super();
 		exibitors = 1;
+		type = type.SCIENCE;
 		System.out.println("The Fair default constructor has been triggered...");
 	}
 
-	public Fair(int year, int month, int numberCities, int exibitors) {
+	public Fair(int year, int month, int numberCities, int exibitors, type type) {
 		super(year, month, numberCities);
 		this.exibitors = exibitors;
+		this.type = type;
 		System.out.println("The Fair parametrized constructor has been triggered...");
 	}
 	
 	public Fair(Fair otherFair) {
 		super(otherFair);
 		this.exibitors = otherFair.exibitors;
+		this.type = otherFair.type;
 		System.out.println("The Fair copy constructor has been triggered...");
 	}
 
@@ -45,9 +49,18 @@ public class Fair extends Event{
 		this.exibitors = exibitors;
 	}
 	
+	public type getType() {
+		return type;
+	}
+
+	public void setType(type type) {
+		this.type = type;
+	}
+
+	
 	public String toString(){
 		return "This Event will be held in " + this.getYear() + ", " + this.getMonth() + " in " + this.getNumberCities() + " cities"
-				+ " and has " + this.getExibitors() + " exibitors";
+				+ " and has " + this.getExibitors() + " exibitors" + " and is type " + this.getType();
 	}
 	
 	//The null verification in this case is redundant, because you cannot call this equals() method on a null object. 
@@ -58,6 +71,6 @@ public class Fair extends Event{
 			return false;
 		}
 		return this.getYear() == otherFair.getYear() && this.getMonth() == otherFair.getMonth() && this.getNumberCities() == otherFair.getNumberCities()
-				&& this.getExibitors() == otherFair.getExibitors();
+				&& this.getExibitors() == otherFair.getExibitors() && this.type == otherFair.type;
 	}
 }
