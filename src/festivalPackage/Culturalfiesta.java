@@ -11,7 +11,7 @@ import festivalPackage.Festival;
 //-----------------------------------------------------
 
 /**
-* 
+* Culturalfiesta class
 * @author Jeremiah Tiongson, Yun Shi Lin
 *
 */

@@ -10,7 +10,7 @@ import festivalPackage.Festival;
 //-----------------------------------------------------
 
 /**
-* 
+* Musicfiesta class
 * @author Jeremiah Tiongson, Yun Shi Lin
 *
 */

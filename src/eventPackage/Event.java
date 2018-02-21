@@ -8,7 +8,7 @@ package eventPackage;
 //-----------------------------------------------------
 
 /**
- * 
+ * Event class
  * @author Jeremiah Tiongson, Yun Shi Lin
  *
  */

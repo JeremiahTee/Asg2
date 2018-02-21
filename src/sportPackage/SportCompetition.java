@@ -11,7 +11,7 @@ import eventPackage.Event;
 import festivalPackage.Musicfiesta;
 
 /**
-* 
+* SportCompetition class
 * @author Jeremiah Tiongson, Yun Shi Lin
 *
 */

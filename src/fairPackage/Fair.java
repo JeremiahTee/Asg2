@@ -11,7 +11,7 @@ import eventPackage.Event;
 import sportPackage.SportCompetition;
 
 /**
- * 
+ * Fair class
  * @author Jeremiah Tiongson, Yun Shi Lin
  *
  */

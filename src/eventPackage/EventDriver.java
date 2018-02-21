@@ -29,7 +29,9 @@ public class EventDriver {
 		for(int i = 0; i < copyArray.length; i++) {
 			//if it's a Festival class or a child of Festival then copy it
 			if(array[i] instanceof Festival) {
-				copyArray[i] = array[i].clone();
+				//For polymorphism, use: 
+				//copyArray[i] = array[i].clone();
+				copyArray[i] = new Event(array[i]); //using Event copy constructor as asked by Aiman Hanna, instead of clone()
 			}else {
 				copyArray[i] = new Fair(); //if it's not a Festival, fill it with a new Fair to avoid null pointer exception
 			}
@@ -173,7 +175,10 @@ public class EventDriver {
 		displayArray(partTwoArray);
 		displayArray(theCopy);
 		
-		System.out.println("\n\n\nAs you can see, all Festivals have been copied. Since both arrays have same length,\n every spot needed to be filled with an object in order to be printed.\n"
+		System.out.println("\n\n\nAs you can see, all Festivals have been copied but the program misbehaved."
+				+ "\nEvery instance of Festival has been copied, but since the Event copy constructor has been used,"
+				+ "\nPolymorphism is switched off and the program will misbehave! "
+				+ "\nAdditionally, since both arrays have same length,\n every spot needed to be filled with an object in order to be printed.\n"
 				+ "Thus, every object which was not a Festival or a child of Festival, has been replaced with Fair.");
 		
 	}

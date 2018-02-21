@@ -10,7 +10,7 @@ package festivalPackage;
 import eventPackage.Event;
 
 /**
- * 
+ * Festival class
  * @author Jeremiah Tiongson, Yun Shi Lin
  *
  */
@@ -41,13 +41,13 @@ public class Festival extends Event{
 		System.out.println("The Festival parametrized constructor has been triggered...");
 	}
 
-	public Festival(Festival otherFestival){
-		this.setYear(otherFestival.getYear());
-		this.setMonth(otherFestival.getMonth());
-		this.setNumberCities(otherFestival.getNumberCities());
-		this.name = otherFestival.name;
-		this.ticketPrice = otherFestival.ticketPrice;
-		this.duration = otherFestival.duration;
+	public Festival(Festival array){
+		this.setYear(array.getYear());
+		this.setMonth(array.getMonth());
+		this.setNumberCities(array.getNumberCities());
+		this.name = array.name;
+		this.ticketPrice = array.ticketPrice;
+		this.duration = array.duration;
 		System.out.println("The Festival copy constructor has been triggered...");
 	}
 	
