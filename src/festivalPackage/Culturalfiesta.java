@@ -64,4 +64,8 @@ public class Culturalfiesta extends Festival{
 				&& this.getName() == otherCultural.getName() && this.getTicketPrice() == otherCultural.getTicketPrice() && this.getDuration() == otherCultural.getDuration()
 				&& this.getSpokenLanguages() == otherCultural.getSpokenLanguages();
 	}
+	
+	public Culturalfiesta clone() {
+		return new Culturalfiesta(this);
+	}
 }
