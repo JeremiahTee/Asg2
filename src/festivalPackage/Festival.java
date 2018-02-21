@@ -17,9 +17,13 @@ import eventPackage.Event;
 
 public class Festival extends Event{
 	//type: Arts, Beer, Comedy, Film, Fire, Folk;
-	protected String name;
-	protected double ticketPrice;
-	protected int duration;
+	//We decided to make these attributes private instead of protected to assure the most restrictive rights
+	//Some trade-offs:
+	//-since attributes are private, they won't have the protected access rights
+	//-to access these attributes they have to go through their Father, using getters
+	private String name;
+	private double ticketPrice;
+	private int duration;
 	
 	public Festival() {
 		super();
@@ -87,4 +91,7 @@ public class Festival extends Event{
 				&& this.getName() == otherFestival.getName() && this.getTicketPrice() == otherFestival.getTicketPrice() && this.getDuration() == otherFestival.getDuration();
 	}
 	
+	public Festival clone() {
+		return new Festival(this);
+	}
 }

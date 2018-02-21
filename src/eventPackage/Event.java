@@ -71,4 +71,9 @@ public class Event {
 		}
 		return this.getYear() == otherEvent.getYear() && this.getMonth() == otherEvent.getMonth() && this.getNumberCities() == otherEvent.getNumberCities();
 	}
+	
+	//Create and return a new Event using the copy constructor
+	public Event clone() {
+		return new Event(this);
+	}
 }

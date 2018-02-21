@@ -8,6 +8,7 @@ import eventPackage.Event;
 //Jeremiah Tiongson, 40055477
 //Yun Shi Lin, 40055867
 //-----------------------------------------------------
+import festivalPackage.Musicfiesta;
 
 /**
 * 
@@ -68,5 +69,9 @@ public class SportCompetition extends Event{
 		}
 		return this.getYear() == otherSportCompetition.getYear() && this.getMonth() == otherSportCompetition.getMonth() && this.getNumberCities() == otherSportCompetition.getNumberCities()
 				&& this.getNumberActivities() == otherSportCompetition.getNumberActivities() && this.season == otherSportCompetition.season;
+	}
+	
+	public SportCompetition clone() {
+		return new SportCompetition(this);
 	}
 }

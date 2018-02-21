@@ -8,6 +8,7 @@ import eventPackage.Event;
 //Jeremiah Tiongson, 40055477
 //Yun Shi Lin, 40055867
 //-----------------------------------------------------
+import sportPackage.SportCompetition;
 
 /**
  * 
@@ -72,5 +73,9 @@ public class Fair extends Event{
 		}
 		return this.getYear() == otherFair.getYear() && this.getMonth() == otherFair.getMonth() && this.getNumberCities() == otherFair.getNumberCities()
 				&& this.getExibitors() == otherFair.getExibitors() && this.type == otherFair.type;
+	}
+	
+	public Fair clone() {
+		return new Fair(this);
 	}
 }

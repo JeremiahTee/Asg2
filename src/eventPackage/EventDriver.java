@@ -22,8 +22,29 @@ import sportPackage.SportCompetition.seasonName;
  */
 
 public class EventDriver {
+	
+	public static Event[] copyFestival(Event[] array) {
+		Event[] copyArray = new Event[array.length];
+		String className = "null";
+		for(int i = 0; i < copyArray.length; i++) {
+			/*
+			className = array[i].getClass().toString();
+			className = className.substring(6); //just to get the class name
+			if(className.equals("Festival")) {
+				copyArray[i] = new Festival((Festival) array[i]);
+			}*/
+			
+			if(array[i] instanceof Festival) {
+				
+			}
+		}
+		
+		return copyArray;
+	}
 
 	public static void main(String[] args) {
+		
+		//Part 1
 		seasonName season = null;
 
 		Event BladeRunner = new Event(); // default constructor: 2017, 12, 0
@@ -76,7 +97,7 @@ public class EventDriver {
 		System.out.println(
 				"Is ConcordiaFair equal to McGillFair? (answer should be true) : " + ConcordiaFair.equals(McGillFair)+ "\n");
 
-		// Creation of array fo 10 Event objects
+		// Creation of array of 10 Event objects
 		Event[] eventArray = new Event[10];
 		eventArray[0] = BladeRunner;
 		eventArray[1] = BladeRunner2049;
@@ -114,4 +135,8 @@ public class EventDriver {
 		System.out.println("\nThe event with most number of cities is: " + eventArray[indexMostCities] 
 				+ "\n with an index of " + indexMostCities);
 	}
+	
+	//Part 2
+	// Creation of array of 12 objects
+	Event[] partTwoArray = new Event[12];
 }

@@ -61,4 +61,8 @@ public class Musicfiesta extends Festival{
 				&& this.getName() == otherMusicfiesta.getName() && this.getTicketPrice() == otherMusicfiesta.getTicketPrice() && this.getDuration() == otherMusicfiesta.getDuration()
 				&& this.getNumberBands() == otherMusicfiesta.getNumberBands();
 	}
+	
+	public Musicfiesta clone() {
+		return new Musicfiesta(this);
+	}
 }
