@@ -8,7 +8,7 @@ import sportPackage.SportCompetition.seasonName;
 
 //-----------------------------------------------------
 //Assignment #1
-//Question: PART 1
+//Question: PART 1 & PART 2
 //Written by: 
 //Jeremiah Tiongson, 40055477
 //Yun Shi Lin, 40055867
